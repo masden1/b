@@ -17,7 +17,7 @@ console.log("");
 
 const Reff = 'MASDEN';
 const LooP = '99999999';
-const DelaY = '1000';
+const DelaY = '10000';
 
 console.log("");
 console.log("");
