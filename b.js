@@ -17,7 +17,7 @@ console.log("");
 
 const Reff = 'MASDEN';
 const LooP = '99999999';
-const DelaY = '100';
+const DelaY = '1000';
 
 console.log("");
 console.log("");
@@ -213,7 +213,7 @@ const genEmail = length =>
     for (var i = 0; i < length; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-    resolve(text);
+    resolve(nama+text);
   });
 
 const domain = [
