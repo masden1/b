@@ -16,8 +16,8 @@ console.log("");
 console.log("");
 
 const Reff = 'MASDEN';
-const LooP = '10000';
-const DelaY = '100000';
+const LooP = '99999999';
+const DelaY = '100';
 
 console.log("");
 console.log("");
@@ -25,7 +25,7 @@ console.log("");
 const functionRegister = (email, domain) =>
   new Promise((resolve, reject) => {
     const body = {
-      password: "Coegsekali1!",
+      password: "!Q@W#Er4t5y6",
       monetize: true,
       email: `${email}@${domain}`,
       referral_id: Reff
@@ -63,7 +63,7 @@ const functionCreateEmail = (email, domain) =>
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36"
       }
     })
-      .then(res => resolve("success create email"))
+      .then(res => resolve("Berhasil Buat Email"))
       .catch(err =>
         console.log(
           "[" +
@@ -72,7 +72,7 @@ const functionCreateEmail = (email, domain) =>
             " " +
             "]" +
             " " +
-            "Ada masalah sssSssstt..."
+            "Ada masalah buat emailnya bray.. re-run : node b"
         )
       );
   });
@@ -105,7 +105,7 @@ const functionGetMessages = (email, domain) =>
             " " +
             "]" +
             " " +
-            "Ada masalah sssSssstt..."
+            "Ada masalah grab inboxnya bray.. re-run : node b"
         )
       );
   });
@@ -139,7 +139,7 @@ const functionVerification = (email, token) =>
             " " +
             "]" +
             " " +
-            "Ada masalah sssSssstt..."
+            "Ada masalah grab verifnya bray.. re-run : node b"
         )
       );
   });
@@ -199,7 +199,7 @@ const functionGetLocation = domain =>
             " " +
             "]" +
             " " +
-            "Ada masalah sssSssstt..."
+            "Ada masalah Final Urlnya bray.. re-run : node b"
         )
       );
   });
@@ -207,8 +207,8 @@ const functionGetLocation = domain =>
 const genEmail = length =>
   new Promise((resolve, reject) => {
     var text = "";
-    var possible =
-      "bcdfghjklmnpqrstvwxyz1234567890BCDFGHJKLMNPQRSTVWXYZ";
+    var possible = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var nama = "masden";
 
     for (var i = 0; i < length; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));
@@ -223,7 +223,7 @@ const domain = [
   try {
     for (let index = 0; index < LooP; index++) {
       const item = await domain[(Math.random() * domain.length) | 0];
-      const emel = await genEmail(10);
+      const emel = await genEmail(5);
       await delay(10000);
       const register = await functionRegister(emel, item);
       const email = emel + "@" + item;
@@ -330,7 +330,7 @@ const domain = [
               " " +
               "]" +
               " " +
-              "Veryf Sukses"
+              "Verifikasi Sukses"
           );
           console.log("");
           console.log("");
